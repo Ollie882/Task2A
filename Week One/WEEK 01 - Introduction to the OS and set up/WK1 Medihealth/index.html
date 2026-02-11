@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediHealth Appointments</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <h1>MediHealth Appointments</h1>
+
+  <!-- Appointment form -->
+  <form id="appointment-form" novalidate>
+    <fieldset>
+      <legend>Book an appointment</legend>
+
+      <div class="form-row">
+        <label for="patient_name">Patient Name:</label>
+        <input id="patient_name" name="patient_name" type="text" required autocomplete="name" maxlength="100">
+      </div>
+
+      <div class="form-row">
+        <label for="patient_name">Reason:</label>
+        <input id="Information_needed" name="Information_needed" type="text" required autocomplete="Information_needed" maxlength="100">
+      </div>
+
+      <div class="form-row">
+        <label for="date_of_birth">Date Of Birth:</label>
+        <input id="date_of_birth" name="date_of_birth" type="date" required>
+      </div>
+
+      <div class="form-row">
+        <label for="date_of_appointment">Date Of Appointment:</label>
+        <input id="date_of_appointment" name="date_of_appointment" type="date" required>
+      </div>
+
+      <div class="form-row">
+        <label for="address">Address:</label>
+        <input id="address" name="address" type="text" required autocomplete="street-address" maxlength="200">
+      </div>
+
+      <div class="form-row">
+        <label for="phone_number">Phone Number:</label>
+        <input
+          id="phone_number"
+          name="phone_number"
+          type="tel"
+          required
+          placeholder="+447000000000"
+          inputmode="tel"
+          pattern="^\+?[0-9]{7,15}$"
+          maxlength="15"
+          autocomplete="tel"
+          aria-describedby="phone_help">
+        <small id="phone_help">Use international format, e.g., +447000000000</small>
+      </div>
+
+      <div class="form-row">
+        <label for="gp">GP:</label>
+        <input id="gp" name="gp" type="text" required maxlength="50" autocomplete="organization">
+      </div>
+
+      <button type="submit">Book appointment</button>
+    </fieldset>
+  </form>
+
+  <h2>All appointments</h2>
+  <ul id="appointments-list" aria-live="polite"></ul>
+
+
+  <!-- Load your JavaScript from the static folder -->
+  <script src="static/app.js"></script>
+</body>
+</html>

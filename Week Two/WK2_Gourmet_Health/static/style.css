@@ -1,0 +1,106 @@
+/* ===== Global Style ===== */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 40px;
+    background: linear-gradient(135deg, #0d0d0f, #1b1b1f, #0e0e0f);
+    color: #e6e6e8;
+    user-select: none;
+}
+
+h1, h2 {
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ff4d6d;
+    margin-bottom: 15px;
+}
+
+/* ===== Form Styling ===== */
+form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 40px;
+}
+
+input {
+    padding: 12px 15px;
+    margin: 5px 10px 15px 0;
+    border-radius: 10px;
+    border: none;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.07);
+    color: #fff;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 2px #ff4d6d;
+}
+
+/* ===== Buttons ===== */
+button {
+    background: linear-gradient(135deg, #ff4d6d, #ff3358);
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    transition: 0.25s ease-in-out;
+    box-shadow: 0 4px 15px rgba(255, 76, 96, 0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 76, 96, 0.5);
+}
+
+/* ===== Tables ===== */
+table {
+    width: 100%;
+    margin: 20px 0 40px 0;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45);
+}
+
+th {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ff4d6d;
+    padding: 14px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+td {
+    padding: 12px;
+    color: #e6e6e8;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transition: 0.2s;
+}
+
+/* ===== Scrollbar (Fancy) ===== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #ff4d6d;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}

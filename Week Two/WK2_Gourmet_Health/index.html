@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supabase Dashboard</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <h1>Supabase Data Dashboard</h1>
+
+    <!-- ADD USER FORM -->
+    <h2>Add User</h2>
+    <form id="data-form">
+        <input type="text" id="first" placeholder="First Name" required />
+        <input type="text" id="surname" placeholder="Surname" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="number" id="loyalty" placeholder="Loyalty Points" required />
+        <input type="text" id="address" placeholder="Address" required />
+        <button type="submit">Add User</button>
+    </form>
+
+    <!-- USERS TABLE -->
+    <h2>Users</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>First Name</th>
+                <th>Surname</th>
+                <th>Email</th>
+                <th>Loyalty</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="users-body"></tbody>
+    </table>
+
+    <!-- RECIPES TABLE -->
+    <h2>Recipes</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Recipe ID</th>
+                <th>Name</th>
+                <th>Difficulty</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="recipes-body"></tbody>
+    </table>
+
+    <!-- RECIPE INGREDIENTS TABLE -->
+    <h2>Recipe Ingredients</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Recipe ID</th>
+                <th>Ingredient</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody id="ri-body"></tbody>
+    </table>
+
+    <!-- ORDERS TABLE -->
+    <h2>Orders</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>User ID</th>
+                <th>Recipe ID</th>
+            </tr>
+        </thead>
+        <tbody id="orders-body"></tbody>
+    </table>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
