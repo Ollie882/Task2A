@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DreamTrips Honeymoon</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<header>
+  <h1>DreamTrips Honeymoon</h1>
+  <h2>Build Your Honeymoon Itinerary</h2>
+</header>
+
+<main>
+
+<form id="itinerary-form" novalidate>
+  <fieldset>
+    <legend>Add itinerary item</legend>
+
+    <div class="form-row">
+      <label for="destination">Destination</label>
+      <input id="destination" type="text" required maxlength="100">
+    </div>
+
+    <div class="form-row">
+      <label for="day_number">Day number</label>
+      <input id="day_number" type="number" required min="1" max="60">
+    </div>
+
+    <div class="form-row">
+      <label for="activity">Activity</label>
+      <input id="activity" type="text" required maxlength="100">
+    </div>
+
+    <div class="form-row">
+      <label for="accommodation">Accommodation type</label>
+      <input id="accommodation" type="text" required maxlength="50">
+    </div>
+
+    <div class="form-row">
+      <label for="notes">Notes</label>
+      <input id="notes" type="text" required minlength="10" maxlength="200">
+    </div>
+
+    <button type="submit">Add to itinerary</button>
+    <p id="formMessage" aria-live="polite"></p>
+  </fieldset>
+</form>
+
+<h2>Your itinerary</h2>
+<ul id="itinerary-list"></ul>
+
+</main>
+
+<script src="static/app.js"></script>
+</body>
+</html>
